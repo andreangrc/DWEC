@@ -10,8 +10,6 @@ Un archivo local .gitignore generalmente se coloca en el directorio raíz de un 
 
 Para crear un archivo .gitignore local, crea un archivo de texto y asígnale el nombre ".gitignore" (recuerda incluir el . al principio). Luego, edita este archivo según sea necesario. Cada nueva línea debe incluir un archivo o carpeta adicional que quieras que Git lo ignore.
 
-Las entradas de este archivo también pueden seguir un patrón coincidente:
-
 ### Indicar 3 tipo de acciones que se puedan realizar con el .gitignore:
 
 1. "*" se utiliza como una coincidencia comodín.
