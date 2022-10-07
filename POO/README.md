@@ -3,7 +3,7 @@
 
 
 
-> Boletín POO Avanzado.
+> BOLETÍN POO AVANZADO.
 
 
 
