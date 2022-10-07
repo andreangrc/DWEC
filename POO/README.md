@@ -12,7 +12,7 @@
 
 
 
-Se van a representar las Clases, Objetos e Instancias en Pseudocódigo, Java y Phyton.
+Se requieren ejemplos de encapsulación, abstracción, herencia y polimorfismo.
 
 
 
