@@ -12,7 +12,10 @@
 
 
 
-Se van a representar las Clases, Objetos e Instancias en Pseudocódigo, Java y Phyton.
+Se requieren ejemplos de encapsulación, abstracción, herencia y polimorfismo en Java 1.8.
+
+Primero vamos a analizar cada uno de los términos y saber su definición:
+- Encapsulación: contiene toda la información de un objeto y oculta los datos de tal forma que sólo sean accesibles mediante operaciones definidas por el propio objeto.
 
 
 
@@ -62,7 +65,7 @@ Se van a representar las Clases, Objetos e Instancias en Pseudocódigo, Java y P
 
 
 
-Para realizar este apartado de Tarea INTERMEDIO, he creado un fichero de texto para realizar el apartado de _Pseudocodigo_, una carpeta para _Java_ y otra para _Python_.
+Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar ejemplos de los diferentes ejercicios.
 
 
 
