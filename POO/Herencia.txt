@@ -1,10 +1,12 @@
-/*CLASE PERSONA - Clase Base de la jerarquía*/
+/* CLASE PERSONA - Clase Base de la jerarquía */
+
 public class Persona {
     private String nombre;
     private int edad;
 
     //CONSTRUCTOR POR DEFECTO
     public Persona() {
+
     }
 
     //CONSTRUCTOR DE UN PARÁMETRO
@@ -23,7 +25,7 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
@@ -48,17 +50,54 @@ public class Persona {
     }
 }
 
-
-
 /* CLASE JOVEN */
+//Hereda los atributos y los métodos de la clase Persona.
 public class Joven extends Persona{
     //constructor por defecto
     public Joven() {
+
     }
     //constructor con un parámetro
     public Joven(String nombre, int edad) {
-        super(nombre);
-        super(edad);
+        super(nombre, edad);
+        System.out.println("Constructor de Joven");
+    }
+    //modificación del método toString() para mostrar el mensaje adecuado
+    @Override
+    public String toString() {
+        return super.toString() + " -> Joven";
+    }
+}
+
+/* CLASE ADULTO */
+//Hereda los atributos y los métodos de la clase Persona.
+public class Adulto extends Persona{
+    //constructor por defecto
+    public Adulto() {
+
+    }
+    //constructor con un parámetro
+    public Adulto(String nombre, int edad) {
+        super(nombre,edad);
+        System.out.println("Constructor de Joven");
+    }
+    //modificación del método toString() para mostrar el mensaje adecuado
+    @Override
+    public String toString() {
+        return super.toString() + " -> Joven";
+    }
+}
+
+/* CLASE ANCIANO */
+//Hereda los atributos y los métodos de la clase Persona.
+public class Anciano extends Persona{
+    //constructor por defecto
+    public Anciano() {
+
+    }
+    //constructor con un parámetro
+    public Anciano(String nombre, int edad) {
+        super(nombre, edad);
         System.out.println("Constructor de Joven");
     }
     //modificación del método toString() para mostrar el mensaje adecuado

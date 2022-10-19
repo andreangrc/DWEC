@@ -8,7 +8,7 @@ public class Instrumentos {
 }
 
  /* Definimos una clase 'Instrumentos' que tiene el método "sonitoqueemite", y luego
- creamos dos clases hijas: Guitarra y tambor */
+ creamos dos clases hijas: Guitarra y flauta */
 
 class Guitarra extends Instrumentos {
     public void sonidoQueEmite() {

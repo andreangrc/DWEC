@@ -1,10 +1,21 @@
 /* La Encapsulación: contiene toda la información de un objeto y oculta los datos de tal forma que 
 sólo sean accesibles mediante operaciones definidas por el propio objeto.*/
 
-public class bicicleta {
+public class Bicicleta {
     /* En este caso ocultamos los datos marca y color con private */
     private String marca;
     private String color;
+
+    //CONSTRUCTOR POR DEFECTO
+    public Bicicleta() {
+    }
+
+    //CONSTRUCTOR DE UN PARÁMETRO
+    public Bicicleta(String marca, int color) {
+        this.marca = marca;
+        this.color = color;
+        System.out.println("Constructor de Persona " + marca + color);
+    }
 
     // GETTERS Y SETTERS
     public String getMarca(){
