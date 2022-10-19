@@ -20,7 +20,7 @@ Se requieren ejemplos de encapsulación, abstracción, herencia y polimorfismo e
 
 
 Primero vamos a analizar cada uno de los términos y saber su definición:
-## Encapsulación
+## - Encapsulación
   Contiene toda la información de un objeto y oculta los datos de tal forma que sólo sean accesibles mediante operaciones definidas por el propio      objeto.
   El término encapsulamiento en Java, consiste en ocultar atributos de un objeto de manera que solo se pueda cambiar mediante operaciones definidas en ese objeto. Está   estrechamente relacionado con la visibilidad. 
   Para definir la visibilidad en Java, se dispone de palabras reservadas:
@@ -72,13 +72,17 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 
 
-
-
-
-**UML de ejemplo para la solución**
+**Estos son los UML necesarios para la solución:**
 
 ![UML1](images/UMLPolimorfismo.PNG)
 
+                                                          UML Ejemplo Polimorfismo
+                                                
+
+![UML2](images/UMLHerencia.PNG)
+
+                                                           UML Ejemplo Herencia
+
 
 
 
@@ -87,11 +91,11 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 
 
-## 💡 Pruebas
+## 💡 Pruebas.
 
 ![Foto Encapsulamiento](images/Captura2.PNG)
 
-                                                                    Encapsulación
+                                                                   Prueba Encapsulación en Java
 
 
 
@@ -99,14 +103,45 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 
 
+
+![Foto Abstracción 1](images/Captura1.PNG)
+
+                                                                   Prueba 1 Abstracción en Java
+
+
+
+---
+
+
+
+
+
+
+![Foto Abstracción 1](images/Captura1.PNG)
+
+                                                                   Prueba 2 Abstracción en Java
+
+
+
+---
+
+
+
+
+
+![Foto Herencia](images/Captura3.PNG)
+![Foto Herencia](images/Captura3_1.PNG)
+
+                                                                   Prueba Herencia en Java
+                                                                   
+                                                                   
+                                                                   
+                                                                   
+ ---
 
 ![Foto Polimorfismo](images/Captura1.PNG)
 
-                                                                    Polimorfismo
-
-
-
----
+                                                                   Prueba Polimorfismo en Java
 
 
 
