@@ -12,14 +12,14 @@ public class Instrumentos {
 
 class Guitarra extends Instrumentos {
     public void sonidoQueEmite() {
-        System.out.println("sonido de tambor");
+        System.out.println("sonido de guitarra");
     }
 }
 
 
-class Tambor extends Instrumentos {
+class Flauta extends Instrumentos {
     public void sonidoQueEmite() {
-        System.out.println("sonido de guitarra");
+        System.out.println("sonido de flauta");
     }
 }
 
