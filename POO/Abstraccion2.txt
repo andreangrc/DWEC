@@ -1,5 +1,4 @@
-/* Una abstracción puede definirse como: 
-las características especificas de un objeto, aquellas que lo distinguen de los demás tipos de objetos y 
+/* Una abstracción puede definirse como: las características especificas de un objeto, aquellas que lo distinguen de los demás tipos de objetos y 
 que logran definir límites conceptuales respecto a quien está haciendo dicha abstracción del objeto. */
 
 
