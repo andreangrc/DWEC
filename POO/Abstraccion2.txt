@@ -4,10 +4,50 @@ que logran definir límites conceptuales respecto a quien está haciendo dicha a
 
 
 public class Mesa(){
-    /* Abstraemos de la mesa su color, forma y el material del cual está hecha y nos quedamos con la idea o el concepto de la mesa */
+    /* Abstraemos de la mesa su color, forma y el material del cual está hecha y 
+    nos quedamos con la idea o el concepto de la mesa */
+
     private String color;
     private String forma;
     private String material;
 
+    //CONSTRUCTOR POR DEFECTO
+    public Mesa() {
+
+    }
+
+    //CONSTRUCTOR DE UN PARÁMETRO
+    public Mesa(String color, String forma, String material) {
+        this.color = color;
+        this.forma = forma;
+        this.material = material; 
+        System.out.println("Constructor de Persona " + color + forma + material;
+    }
+
+    //GETTETS Y SETTERS
+    public String getColor(){
+        return color;
+    }
+
+    public void setFColor(){
+        this.color = color;
+    }
+
+
+    public String getForma(){
+        return forma;
+    }
+
+    public void setForma(){
+        this.forma = forma;
+    }
+
+    public String getMaterial(){
+        return material;
+    }
+
+    public void setMaterial(){
+        this.material = material;
+    }
     
 }

@@ -1,0 +1,44 @@
+/* Una abstracción puede definirse como: las características especificas de un objeto, aquellas que lo distinguen de los demás tipos de objetos y 
+que logran definir límites conceptuales respecto a quien está haciendo dicha abstracción del objeto. */
+
+public class Persona  {
+    /* Abstraemos de la persona su nombre, su sexo y su edad y nos quedamos con la idea o el concepto de la persona */
+    private String nombre;
+    private String sexo;
+    private int edad;
+
+    public Persona(){
+
+    }
+
+    public Persona(String nombre, String sexo, int edad){
+        this.nombre = nombre;
+        this.sexo = sexo;
+        this.edad = edad;
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void setNombre(){
+        this.nombre = nombre;
+    }
+
+    public String getSexo(){
+        return nombre;
+    }
+
+    public void setSexo(){
+        this.sexo = sexo;
+    }
+
+    public int getEdad(){
+        return edad;
+    }
+
+    public void setEdad(){
+        this.edad = edad;
+    }
+
+}
