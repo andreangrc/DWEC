@@ -34,7 +34,7 @@ public class Bicicleta {
         this.color = color;
     }
 
-    public bicicleta(String marca, String color){
+    public Bicicleta(String marca, String color){
         this.marca = marca;
         this.capacidad = capacidad;
     }
