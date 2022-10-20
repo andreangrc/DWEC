@@ -2,7 +2,7 @@
 que logran definir límites conceptuales respecto a quien está haciendo dicha abstracción del objeto. */
 
 
-public class Mesa(){
+public class Mesa {
     /* Abstraemos de la mesa su color, forma y el material del cual está hecha y 
     nos quedamos con la idea o el concepto de la mesa */
 
