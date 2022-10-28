@@ -1,27 +1,21 @@
-
-
 var datos = document.getElementById("tablita");
 
+function generarDatos(filas, columnas) {
 
-fuction crearTabla() {
-    let filas = parseInt(prompt('Elija el numero de filas'));
-    let columnas = parseInt(prompt('Elija el numero de columnas'));
+    var respuesta = new Array ("Andrea", "Richi", "Manuel", "Paco", "Quiles", "Juanma");
+    var aleatorio = Math.floor((Math.random()*respuesta.length));
+
+    for (let i = 0; i < filas; i++) {
+        let filaActual = document.getElementById("tablita").insertRow(i);
+        
+        for (let j = 0; j < columnas; j++) {
+            let celda = filaActual.insertCell(j);
+
+            celda.innerHTML = respuesta[aleatorio];
+        }
+    }
 }
-tablita.innerHTML = `
-    <tr>       
-        <td>Celda 1</td>
 
-        <td>Celda 2</td>
 
-        <td>Celda 3</td>
-    </tr>
-
-    <tr>
-        <td>Celda 4</td>
-
-        <td>Celda 5</td>
-
-        <td>Celda 6</td>
-    </tr>
-    `;
-
+generarDatos(5,10);
+    
