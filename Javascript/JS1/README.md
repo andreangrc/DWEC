@@ -44,6 +44,9 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
         <p>Some original document content.</p>
       </body>
     </html>
+    
+  ## -> inner.HTML
+  La propiedad Element.innerHTML devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
   
 
 
