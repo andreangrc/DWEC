@@ -48,6 +48,12 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
   ## -> inner.HTML
   La propiedad Element.innerHTML devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
   
+  ## -> Método .insertRow()
+  Inserta una nueva fila en un determinada tabla y devuelve una referencia a la nueva fila.
+  
+  ## -> Método .insertCell()
+  Inserta una nueva celda  en una fila de la tabla y devuelve una referencia a la celda.
+  
 
 
 
@@ -59,7 +65,7 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
 
 ## ✏️ Diseño de la solución.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar información sobre 
+Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar información sobre los scripts y sobre lo que me pedía el ejercicio. A continuación, he buscado ejemplos e información en internet y he encontrado unos métodos para insertar filas y columnas desde js ( .insertRow() e .insertCell() ). Después de encontrar esta información toca implementarla en la siguiente fase.
 
 
 
@@ -73,7 +79,7 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 ## 📝 Implementación de la solución.
 
-En este apartado vamos a ponernos a implementar todo el diseño del apartado anterior, vamos a hacer el ejemplo y los gifs de cada prueba.
+En este apartado vamos a ponernos a implementar todo el diseño de los apartados anteriores, vamos a hacer el ejemplo y los gifs de cada prueba.
 
 
 ---
@@ -83,7 +89,7 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 ## 💡 Pruebas.
 
-![GIF1](images/Captura2.PNG)
+![GIF1](recursos/GIF1.gif)
 
                                                                           Criterio 1:
                                                             Dado que tengo un método generaDatos(5, 4)
@@ -97,7 +103,7 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 
 
-![GIF2](images/Captura4.PNG)
+![GIF2](recursos/GIF3.gif)
 
                                                                   Criterio 2:
                                                     Dado que tengo un método generaDatos(4, 5)
@@ -113,12 +119,12 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 
 
-![GIF3](images/Captura5.PNG)
+![GIF3](recursos/GIF2.gif)
 
                                                                   Criterio 3:
-Dado que tengo un método generaDatos(12, 8)
-Cuando pongo los valores fila 12 y columna 8
-Entonces me aparece en el html una tabla con 12 filas y 8 columnas con datos randoms.
+                                                    Dado que tengo un método generaDatos(12, 8)
+                                                    Cuando pongo los valores fila 12 y columna 8
+                                 Entonces me aparece en el html una tabla con 12 filas y 8 columnas con datos randoms.
 
 
 
