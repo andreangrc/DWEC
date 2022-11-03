@@ -48,6 +48,12 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
   ## -> inner.HTML
   La propiedad Element.innerHTML devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
   
+  ## -> Método .insertRow()
+  Inserta una nueva fila en un determinada tabla y devuelve una referencia a la nueva fila.
+  
+  ## -> Método .insertCell()
+  Inserta una nueva celda  en una fila de la tabla y devuelve una referencia a la celda.
+  
 
 
 
@@ -59,7 +65,7 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
 
 ## ✏️ Diseño de la solución.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar información sobre 
+Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar información sobre los scripts y sobre lo que me pedía el ejercicio. A continuación, he buscado ejemplos e información en internet y he encontrado unos métodos para insertar filas y columnas desde js ( .insertRow() e .insertCell() ). Después de encontrar esta información toca implementarla en la siguiente fase.
 
 
 
@@ -73,7 +79,7 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 ## 📝 Implementación de la solución.
 
-En este apartado vamos a ponernos a implementar todo el diseño del apartado anterior, vamos a hacer el ejemplo y los gifs de cada prueba.
+En este apartado vamos a ponernos a implementar todo el diseño de los apartados anteriores, vamos a hacer el ejemplo y los gifs de cada prueba.
 
 
 ---
