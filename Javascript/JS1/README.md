@@ -64,19 +64,6 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 
 
-**Estos son los UML necesarios para la solución:**
-
-![UML1](images/UMLPolimorfismo.PNG)
-
-                                                          UML Ejemplo Polimorfismo
-                                                
-
-![UML2](images/UMLHerencia.PNG)
-
-                                                           UML Ejemplo Herencia
-
-
-
 
 ---
 
@@ -86,7 +73,7 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 ## 📝 Implementación de la solución.
 
-En este apartado vamos a ponernos a implementar todo el diseño del apartado anterior y hacer los ejemplos de cada uno.
+En este apartado vamos a ponernos a implementar todo el diseño del apartado anterior, vamos a hacer el ejemplo y los gifs de cada prueba.
 
 
 ---
@@ -96,20 +83,12 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 ## 💡 Pruebas.
 
-![Foto Encapsulamiento](images/Captura2.PNG)
+![GIF1](images/Captura2.PNG)
 
-                                                                   Prueba Encapsulación en Java
-
-
-
----
-
-
-
-
-![Foto Abstracción 1](images/Captura4.PNG)
-
-                                                                   Prueba 1 Abstracción en Java
+                                                                          Criterio 1:
+                                                            Dado que tengo un método generaDatos(5, 4)
+                                                            Cuando pongo los valores fila 5 y columna 4
+                                       Entonces me aparece en el html una tabla con 5 filas y 4 columnas con datos randoms.
 
 
 
@@ -118,11 +97,12 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 
 
+![GIF2](images/Captura4.PNG)
 
-
-![Foto Abstracción 1](images/Captura5.PNG)
-
-                                                                   Prueba 2 Abstracción en Java
+                                                                  Criterio 2:
+                                                    Dado que tengo un método generaDatos(4, 5)
+                                                    Cuando pongo los valores fila 4 y columna 5
+                                      Entonces me aparece en el html una tabla con 4 filas y 5 columnas con datos randoms.
 
 
 
@@ -132,16 +112,18 @@ En este apartado vamos a ponernos a implementar todo el diseño del apartado ant
 
 
 
-![Foto Herencia](images/Captura3.PNG)
-![Foto Herencia](images/Captura3_1.PNG)
 
-                                                                   Prueba Herencia en Java
-                                                                   
-                                                                   
-                                                                   
-                                                                   
- ---
+![GIF3](images/Captura5.PNG)
 
-![Foto Polimorfismo](images/Captura1.PNG)
+                                                                  Criterio 3:
+Dado que tengo un método generaDatos(12, 8)
+Cuando pongo los valores fila 12 y columna 8
+Entonces me aparece en el html una tabla con 12 filas y 8 columnas con datos randoms.
 
-                                                                   Prueba Polimorfismo en Java
+
+
+---
+
+
+
+
