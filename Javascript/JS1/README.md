@@ -77,7 +77,7 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar
 
 ## 📝 Implementación de la solución.
 
-En este apartado vamos a ponernos a implementar todo el diseño de los apartados anteriores, vamos a hacer el ejemplo y los gifs de cada prueba.
+En este apartado vamos a ponernos a implementar todos los apartados anteriores, vamos a hacer el ejemplo y los gifs de cada prueba.
 
 
 ---
