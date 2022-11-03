@@ -9,7 +9,6 @@
 
 
 
-
 ## 🔎 Análisis del problema.
 
 
@@ -54,7 +53,6 @@ Primero vamos a analizar cada uno de los términos y saber su definición:
   ## -> Método .insertCell()
   Inserta una nueva celda  en una fila de la tabla y devuelve una referencia a la celda.
   
-
 
 
 
