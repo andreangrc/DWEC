@@ -65,6 +65,13 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 
 
+How TO - Filter/Search Table
+uppercase lowercase
+
+.includes
+
+
+
 
 
 
