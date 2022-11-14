@@ -74,18 +74,18 @@ var paises =  [
     ];
 
 
-    //GENERAR TABLA CON JSON REPRESENTADO
+//GENERAR TABLA CON JSON REPRESENTADO
 
 var tabla = document.getElementById("tablita");
 
 let generaTabla = "";
 
-generaTabla += `<tr><td>Capital</td><td>Pais</td></tr>`;
+generaTabla += `<tr><th>Capital</th><th>Pais</th></tr>`;
 
 for (pais of paises) {
     generaTabla += `<tr>`;
-    generaTabla += `<td>${pais.nombre}</td>`;
     generaTabla += `<td>${pais.capital}</td>`;
+    generaTabla += `<td>${pais.nombre}</td>`;
     generaTabla += `</tr>`;
 }
 
@@ -93,3 +93,28 @@ tabla.innerHTML += generaTabla;
 
 
 //FILTRAR 
+function filtrarTabla() {
+    
+    var input = document.getElementById("myInput");
+
+    var filter = input.value;
+
+    var tr = tabla.getElementsByTagName("tr");
+      
+    for (var i = 0; i < tr.length; i++) {
+      const td = tr[i].getElementsByTagName("td")[0];
+
+      if (td) {
+        const txtValue = td.textContent || td.innerText;
+        if (txtValue.indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+}
+
+//how do i make a table with json
+
+

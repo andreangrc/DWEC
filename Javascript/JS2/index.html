@@ -7,8 +7,39 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <style>
-            #input {
-                position:fixed;
+            #myInput {
+                width: 1820px;
+                height: 30px;
+                border-radius: 10px;
+                border: 2px solid blue;
+                font-size: 17px;
+                margin-left: 35px;
+            }
+
+            table {
+                width: 100%;
+                border: 1px solid #000;
+            }
+
+            h1 {
+                text-align: center;
+            }
+            
+            th {
+                width: 30%;
+                height: 30px;
+                margin: auto;
+                text-align: center;
+                vertical-align: top;
+                border: 1px solid #000;
+                background-color: purple;
+                color:white;
+            }
+
+            th {
+                width: 25%;
+                text-align: center;
+                vertical-align: top;
             }
         </style>
         
@@ -16,11 +47,10 @@
     <body>
        
         <h1>Capitales de Europa</h1>
-        <form id="input" target="_blank">
-            <input type="search" name="busqueda" placeholder="Busca por capitales">          
-        </form>
-        <table id="tablita">
-        </table>
+        
+        <input type="text" id="myInput" onkeyup="filtrarTabla()" placeholder="Buscar capital..."> 
+        <br><br>
+        <table id="tablita"></table>
         <script src='main.js'></script>
     </body>
 </html>
