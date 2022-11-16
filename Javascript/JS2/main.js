@@ -107,14 +107,15 @@ function filtrarTabla() {
       if (td) {
         const txtValue = td.textContent || td.innerText;
         if (txtValue.indexOf(filter) > -1) {
-          tr[i].style.display = "";
+            tr[i].style.display = "";
+            tr[i].id = "visible";
         } else {
-          tr[i].style.display = "none";
+            tr[i].style.display = "none";
+            tr[i].id = "no visible";
         }
       }
     }
 }
 
-//how do i make a table with json
 
 
