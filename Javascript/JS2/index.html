@@ -7,37 +7,43 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <style>
-            #myInput {
-                width: 1820px;
+            #input {
+                width: 80%;
+                align-items: center;
                 height: 30px;
                 border-radius: 10px;
                 border: 2px solid purple;
                 font-size: 17px;
-                margin-left: 35px;
+                margin-left: 187px;
             }
 
             table {
-                width: 100%;
+                margin:auto;
+                width: 80%;
                 border: 1px solid #000;
             }
 
             h1 {
                 text-align: center;
+                font-size: 50px;
             }
             
             th {
                 width: 30%;
-                height: 30px;
+                height: 25px;
+                font-size: 20px;
                 margin: auto;
                 text-align: center;
                 vertical-align: top;
                 border: 1px solid #000;
                 background-color: purple;
                 color:white;
+                border-radius: 10px;
             }
 
-            th {
+            td {
                 width: 25%;
+                font-size: 18px;
                 text-align: center;
                 vertical-align: top;
             }
@@ -48,7 +54,7 @@
        
         <h1>Capitales de Europa</h1>
         
-        <input type="text" id="myInput" onkeyup="filtrarTabla()" placeholder="Buscar capital..."> 
+        <input type="text" id="input" onkeyup="filtrarTabla()" placeholder="🔍 Buscar capital..."> 
         <br><br>
         <table id="tablita"></table>
         <script src='main.js'></script>

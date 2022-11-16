@@ -1,74 +1,86 @@
 // spec.js
-describe('Protractor Demo App', function() {
-    it('should have a title', function() {
-      //PASO 1
-        //ACCIÓN: Abrir la URL
-        browser.get('C:\\Users\\SUP05\\Documents\\GitHub\\DWEC\\Javascript\\JS2\\index.html');
-        // CONDICIÓN: Se muestra una lista de paises y capitales
-        var filas = element.all(by.xpath('//tr'));
-        element(filas.count()).toEqual(19);
+describe('Protractor Demo App', function () {
+  it('Prueba 1: Berlín', function () {
+    browser.waitForAngularEnabled(false);
+    //PASO 1 ->
+    //ACCIÓN: Abrir la URL
+    browser.get('file:///B:/Usuarios/ADA%20ITS%202021-2023/SEGUNDO%20CURSO/DWEC/Javascript/JS2/index.html');
+    //CONDICIÓN: Se muestra una lista de paises y capitales
+    var filas = element.all(by.xpath('//tr'));
+    expect(filas.count()).toEqual(21);
+    browser.sleep(3000);
 
-      //PASO 2
-        //ACCION: escribimos Berlin en el buscador de capitales
-        var buscador = element.all(by.xpath('//input[@type="text"]'));
-        buscador.click();
-        buscador.sendKeys('Berlín');
-        //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
-        var capital = element.all(by.xpath('//tr[@id="visible"]'));
-        expect(capital.count()).toEqual(1);
-    });
-
-    it('should have a title', function() {
-      //PASO 1
-        //ACCIÓN: Abrir la URL
-        browser.get('C:\\Users\\SUP05\\Documents\\GitHub\\DWEC\\Javascript\\JS2\\index.html');
-        // CONDICIÓN: Se muestra una lista de paises y capitales
-        var filas = element.all(by.xpath('//tr'));
-        element(filas.count()).toEqual(19);
-
-      //PASO 2
-        //ACCION: escribimos Berlin en el buscador de capitales
-        var buscador = element.all(by.xpath('//input[@type="text"]'));
-        buscador.click();
-        buscador.sendKeys('cú');
-        //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
-        var capital = element.all(by.xpath('//tr[@id="visible"]'));
-        expect(capital.count()).toEqual(1);
-    });
-
-    it('should have a title', function() {
-      //PASO 1
-        //ACCIÓN: Abrir la URL
-        browser.get('C:\\Users\\SUP05\\Documents\\GitHub\\DWEC\\Javascript\\JS2\\index.html');
-        // CONDICIÓN: Se muestra una lista de paises y capitales
-        var filas = element.all(by.xpath('//tr'));
-        element(filas.count()).toEqual(19);
-
-      //PASO 2
-        //ACCION: escribimos Berlin en el buscador de capitales
-        var buscador = element.all(by.xpath('//input[@type="text"]'));
-        buscador.click();
-        buscador.sendKeys('cu');
-        //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
-        var capital = element.all(by.xpath('//tr[@id="visible"]'));
-        expect(capital.count()).toEqual(1);
-    });
-
-    it('should have a title', function() {
-      //PASO 1
-        //ACCIÓN: Abrir la URL
-        browser.get('C:\\Users\\SUP05\\Documents\\GitHub\\DWEC\\Javascript\\JS2\\index.html');
-        // CONDICIÓN: Se muestra una lista de paises y capitales
-        var filas = element.all(by.xpath('//tr'));
-        element(filas.count()).toEqual(19);
-
-      //PASO 2
-        //ACCION: escribimos Berlin en el buscador de capitales
-        var buscador = element.all(by.xpath('//input[@type="text"]'));
-        buscador.click();
-        buscador.sendKeys('Alemania');
-        //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
-        var capital = element.all(by.xpath('//tr[@id="visible"]'));
-        expect(capital.count()).toEqual(1);
-    });
+    //PASO 2 ->
+    //ACCION: escribimos Berlin en el buscador de capitales
+    var buscador = element.all(by.xpath('//input[@type="text"]'));
+    buscador.click();
+    buscador.sendKeys('Berlín');
+    browser.sleep(3000);
+    //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
+    var capital = element.all(by.xpath('//tr[@id="visible"]'));
+    expect(capital.count()).toEqual(1);
+    browser.sleep(5000);
   });
+
+  it('Prueba 2: cú', function () {
+    //PASO 1 ->
+    //ACCIÓN: Abrir la URL
+    browser.get('file:///B:/Usuarios/ADA%20ITS%202021-2023/SEGUNDO%20CURSO/DWEC/Javascript/JS2/index.html');
+    // CONDICIÓN: Se muestra una lista de paises y capitales
+    var filas = element.all(by.xpath('//tr'));
+    expect(filas.count()).toEqual(21);
+    browser.sleep(3000);
+
+    //PASO 2 ->
+    //ACCION: escribimos Berlin en el buscador de capitales
+    var buscador = element.all(by.xpath('//input[@type="text"]'));
+    buscador.click();
+    buscador.sendKeys('cú');
+    //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
+    var capital = element.all(by.xpath('//tr[@id="visible"]'));
+    expect(capital.count()).toEqual(1);
+    browser.sleep(5000);
+  });
+
+  it('Prueba 3: cu', function () {
+    //PASO 1 ->
+    //ACCIÓN: Abrir la URL
+    browser.get('file:///B:/Usuarios/ADA%20ITS%202021-2023/SEGUNDO%20CURSO/DWEC/Javascript/JS2/index.html');
+    // CONDICIÓN: Se muestra una lista de paises y capitales
+    var filas = element.all(by.xpath('//tr'));
+    expect(filas.count()).toEqual(21);
+    browser.sleep(3000);
+
+    //PASO 2 ->
+    //ACCION: escribimos Berlin en el buscador de capitales
+    var buscador = element.all(by.xpath('//input[@type="text"]'));
+    buscador.click();
+    buscador.sendKeys('cu');
+    browser.sleep(3000);
+    //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
+    var capital = element.all(by.xpath('//tr[@id="visible"]'));
+    expect(capital.count()).toEqual(0);
+    browser.sleep(3000);
+  });
+      
+  it('Prueba 1: Alemania', function () {
+    //PASO 1 ->
+    //ACCIÓN: Abrir la URL
+    browser.get('file:///B:/Usuarios/ADA%20ITS%202021-2023/SEGUNDO%20CURSO/DWEC/Javascript/JS2/index.html');
+    // CONDICIÓN: Se muestra una lista de paises y capitales
+    var filas = element.all(by.xpath('//tr'));
+    expect(filas.count()).toEqual(21);
+    browser.sleep(3000);
+
+    //PASO 2 ->
+    //ACCION: escribimos Berlin en el buscador de capitales
+    var buscador = element.all(by.xpath('//input[@type="text"]'));
+    buscador.click();
+    buscador.sendKeys('Alemania');
+    browser.sleep(3000);
+    //CONDICIÓN: Se muestra la tabla con esa capital y país únicamente
+    var capital = element.all(by.xpath('//tr[@id="visible"]'));
+    expect(capital.count()).toEqual(0);
+    browser.sleep(3000);
+  });
+});

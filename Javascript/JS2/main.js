@@ -20,8 +20,12 @@ var paises =  [
             "capital" : "París"
         },
         {
-            "pais" : "Reino Unido",
+            "nombre" : "Reino Unido",
             "capital" : "Londres"
+        },
+        {
+            "nombre" : "Finlandia",
+            "capital" : "Helsinki"
         },
         {
             "nombre" : "Bélgica",
@@ -44,16 +48,16 @@ var paises =  [
             "capital" : "Tallin"
         },
         {
-            "nombre" : "Finlandia",
-            "capital" : "Helsinki"
-        },
-        {
             "nombre" : "Italia",
             "capital" : "Roma"
         },
         {
             "nombre" : "Luxemburgo",
             "capital" : "Luxemburgo"
+        },
+        {
+            "nombre" : "Rusia",
+            "capital" : "Moscú"
         },
         {
             "nombre" : "Monáco",
@@ -70,9 +74,12 @@ var paises =  [
         {
             "nombre" : "Portugal",
             "capital" : "Lisboa"
+        },
+        {
+            "nombre" : "Grecia",
+            "capital" : "Atenas"
         }
     ];
-
 
 //GENERAR TABLA CON JSON REPRESENTADO
 
@@ -80,7 +87,7 @@ var tabla = document.getElementById("tablita");
 
 let generaTabla = "";
 
-generaTabla += `<tr><th>Capital</th><th>Pais</th></tr>`;
+generaTabla += `<tr><th>Capital</th><th>País</th></tr>`;
 
 for (pais of paises) {
     generaTabla += `<tr>`;
@@ -95,7 +102,7 @@ tabla.innerHTML += generaTabla;
 //FILTRAR 
 function filtrarTabla() {
     
-    var input = document.getElementById("myInput");
+    var input = document.getElementById("input");
 
     var filter = input.value;
 
