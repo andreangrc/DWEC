@@ -130,7 +130,7 @@ El método `indexOf()` devuelve el índice, dentro del objeto String que realiza
 
 ## ✏️ Diseño de la solución.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es buscar información sobre los scripts y sobre lo que me pedía el ejercicio. A continuación, he buscado ejemplos e información en internet y he encontrado unos métodos para insertar filas y columnas desde js ( .insertRow() e .insertCell() ). Después de encontrar esta información toca implementarla en la siguiente fase.
+Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es poner en práctica todo lo buscado en `Análisis del problema`. A continuación, he buscado ejemplos de como mostrar un JSON en una tabla y después de como filtrar esa tabla. 
 
 
 ### DIAGRAMA DE FLUJO 📈
