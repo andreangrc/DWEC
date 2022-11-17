@@ -81,7 +81,7 @@ var paises =  [
         }
     ];
 
-//GENERAR TABLA CON JSON REPRESENTADO
+//GENERAR TABLA CON JSON 
 
 var tabla = document.getElementById("tablita");
 
@@ -89,18 +89,19 @@ let generaTabla = "";
 
 generaTabla += `<tr><th>Capital</th><th>País</th></tr>`;
 
-for (pais of paises) {
+for (pais of paises) {         //FOREACH PARA RECORRER EL JSON 
     generaTabla += `<tr>`;
     generaTabla += `<td>${pais.capital}</td>`;
     generaTabla += `<td>${pais.nombre}</td>`;
     generaTabla += `</tr>`;
 }
 
-tabla.innerHTML += generaTabla;
+tabla.innerHTML += generaTabla;         //MOSTRAMOS EL JSON EN LA TABLA
 
 
 //FILTRAR 
-function filtrarTabla() {
+
+function filtrarTabla() {               //FILTRAMOS LOS DATOS DE LA TABLA
     
     var input = document.getElementById("input");
 
