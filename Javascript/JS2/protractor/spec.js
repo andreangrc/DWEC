@@ -1,3 +1,5 @@
+const {element} = require ("protractor");
+
 // spec.js
 describe('Conjunto de pruebas para comprobar la funcionalidad del boletín JS2', function () {
   it('Prueba 1: Berlín', function () {
