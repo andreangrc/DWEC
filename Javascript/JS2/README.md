@@ -123,6 +123,11 @@ El método `indexOf()` devuelve el índice, dentro del objeto String que realiza
  El método `.toUpperCase()` convierte una cadena en letras mayúsculas.
  
  El método `.toLowerCase()` convierte una cadena en letras minúsculas.
+ 
+ ## -> browser.waitForAngularEnabled
+ Si se establece en `false`, Protractor no esperará a que se completen las tareas de Angular $http y $timeout antes de interactuar con el navegador. Esto puede causar  pruebas irregulares, pero debe usarse si, por ejemplo, su aplicación sondea continuamente una API con $timeout.
+
+
             
 ---
 
@@ -130,7 +135,7 @@ El método `indexOf()` devuelve el índice, dentro del objeto String que realiza
 
 ## ✏️ Diseño de la solución.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es poner en práctica todo lo buscado en `Análisis del problema`. A continuación, he buscado ejemplos de como mostrar un JSON en una tabla y después de como filtrar esa tabla. 
+Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es poner en práctica todo lo buscado en `Análisis del problema`. A continuación, he buscado ejemplos de como mostrar un JSON en una tabla y después de como filtrar esa tabla. Finalmente, para el apartado 4 de automatizar las pruebas, debo hacer el excel y ver el vídeo que nos subió el profesor.
 
 
 ### DIAGRAMA DE FLUJO 📈
@@ -147,6 +152,7 @@ Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es poner 
 ## 📝 Implementación de la solución.
 
 En este apartado vamos a ponernos a implementar todos los apartados anteriores, vamos a hacer el ejercicio completo, la parte de automatización y los gifs de cada prueba.
+En la parte de la automatización, voy a hacer el excel y después de ver el vídeo del profesor haré el ejercicio siguiendo los pasos.
 
 
 ---
