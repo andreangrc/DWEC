@@ -6,7 +6,7 @@ const WIDTH = HEIGHT * 0.9;
 const CELL = WIDTH / (GRID_SIZE + 2); // size of cells (as well as left and right margin)
 const STROKE = CELL / 12; // stroke width
 const DOT = STROKE; // dot radius
-const MARGIN = HEIGHT - (GRID_SIZE + 1) * CELL; // top margin for score, names, etc.
+const MARGIN = HEIGHT - (GRID_SIZE + 1) * CELL; // MARGENES
 
 // COLORES 
 const color_borde_fondo = "RebeccaPurple";
@@ -18,14 +18,18 @@ const COLOR_PLAY_LIT = "RebeccaPurple";
 const COLOR_TIE = "black";
 
 // TEXTOS
-const TEXT_PLAY = "Jugador 1";
-const TEXT_COMP = "Jugador 2";
+const TEXT_PLAY = "J1";
+const TEXT_COMP = "J2";
 const TEXT_COMP_SML = "J2";
 const TEXT_PLAY_SML = "J1";
 const TEXT_SIZE_CELL = CELL / 3;
 const TEXT_SIZE_TOP = MARGIN / 6;
 const TEXT_TIE = "Empate!";
 const TEXT_WIN = "Gana!";
+
+let contador1 = 0;
+let contador2 = 0;
+
 
 // definitions
 const Side = {
@@ -53,7 +57,7 @@ const Side = {
  var scoreComp, scorePlay;
  var timeEnd;
 
- // start a new game
+ // EMPEZAR UN JUEGO NUEVO
  newGame();
 
  // event handlers
@@ -108,7 +112,11 @@ function drawLine(x0, y0, x1, y1, color) {
     ctx.stroke();
 }
 
+
 function drawScores() {
+    let jugador1 = document.getElementById("jugador1");
+    let jugador2 = document.getElementById("jugador2");
+
     let colComp = playersTurn ? COLOR_COMP_LIT : COLOR_COMP;
     let colPlay = playersTurn ? COLOR_PLAY : COLOR_PLAY_LIT;
     drawText(TEXT_PLAY, WIDTH * 0.25, MARGIN * 0.25, colPlay, TEXT_SIZE_TOP);
@@ -116,8 +124,9 @@ function drawScores() {
     drawText(TEXT_COMP, WIDTH * 0.75, MARGIN * 0.25, colComp, TEXT_SIZE_TOP);
     drawText(scoreComp, WIDTH * 0.75, MARGIN * 0.6, colComp, TEXT_SIZE_TOP * 2);
 
+    // texto game over
     if (timeEnd > 0) {
-        timeEnd--; //TEXTO GAMEOVER
+        timeEnd=0;
 
         if (scoreComp == scorePlay) {
             drawText(TEXT_TIE, WIDTH * 0.5, MARGIN * 0.6, COLOR_TIE, TEXT_SIZE_TOP);
@@ -127,20 +136,32 @@ function drawScores() {
             let text = playerWins ? TEXT_PLAY : TEXT_COMP;
             drawText(text, WIDTH * 0.5, MARGIN * 0.5, color, TEXT_SIZE_TOP);
             drawText(TEXT_WIN, WIDTH * 0.5, MARGIN * 0.7, color, TEXT_SIZE_TOP);
-        }
-        if (timeEnd == 0) { //EL JUEGO EMPIEZA DE NUEVO
-            newGame();
+            
+            if(text == "J1"){
+                contador1 ++;
+                jugador1.innerHTML = contador1;
+                text = "Jugador 1";
+            } else if (text == "J2") {
+                contador2 ++;
+                jugador2.innerHTML = contador2;
+                text = "Jugador 2";
+            }
         }
     }
+    
+}
+
+function volverJugar(){
+    newGame();
 }
 
  function drawSquares() {
      for (let row of squares) {
          for (let square of row) {
-             square.drawSides();
-             square.drawFill();
-         }
-     }
+            square.drawSides();
+            square.drawFill();
+        }
+    }
  }
 
  function drawText(text, x, y, color, size) {
@@ -268,16 +289,19 @@ function selectSide() {
     currentCells = [];
 
      // check for winner
-     const DELAY_END = 2; // EL NUEVO JUEGO COMIENZA EN DOS SEGUNDOS
+     const DELAY_END = 10; // EL NUEVO JUEGO COMIENZA EN DOS SEGUNDOS
+    
      if (filledSquare) {
          if (scorePlay + scoreComp == GRID_SIZE * GRID_SIZE) {
              // game over
              timeEnd = Math.ceil(DELAY_END * FPS);
+             
          }
      } else {
         // next player's turn
         playersTurn = !playersTurn;
     }
+   
  }
 // create the Square object constructor
  function Square(x, y, w, h) {
