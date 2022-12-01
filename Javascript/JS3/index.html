@@ -5,9 +5,27 @@
         <title>JS3- Timbiriche</title>
         <style>
             body {
+                margin-top: 100px;
                 display: flex;
-                margin-left: 450px;
-            }   
+            } 
+            .contenido {
+                margin-top: 100px;
+                margin-right: 170px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .button {
+                margin-left: 70px;
+                font-size: 20px;
+                background-color:thistle;
+                width: 90px;
+                height: 80px;
+                border-radius: 10px;
+                border-color: rebeccapurple;
+                cursor: pointer;
+            }
+            
         </style>
     </head>
     <body>
@@ -15,14 +33,13 @@
             <canvas id="dots"></canvas>
 	    </div>
 
-       <div>
-        <button class="button" onclick="volverJugar()">Volver a jugar</button>
-        
-       </div>
-       <h1>Partidas ganadas JUGADOR1</h1>
-        <p id="jugador1">0</p>
-        <h1>Partidas ganadas JUGADOR2</h1>
-        <p id="jugador2">0</p>
+       <div class="contenido">
+            <h3>Partidas ganadas JUGADOR1:</h3>
+            <p id="jugador1">0</p>
+            <h3>Partidas ganadas JUGADOR2:</h3>
+            <p id="jugador2">0</p>
+            <button class="button" onclick="volverJugar()">Volver a jugar</button>
+        </div>
     </body>
     <script type="text/javascript" src="app.js"></script>
 </html>

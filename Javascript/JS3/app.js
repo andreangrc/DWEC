@@ -3,9 +3,9 @@ const FPS = 30; // FRAMES POR SEGUNDO
 const GRID_SIZE = 2; // NUMERO DE FILAS Y COLUMNAS
 const HEIGHT = 450; // pixels      
 const WIDTH = HEIGHT * 0.9;
-const CELL = WIDTH / (GRID_SIZE + 2); // size of cells (as well as left and right margin)
-const STROKE = CELL / 12; // stroke width
-const DOT = STROKE; // dot radius
+const CELL = WIDTH / (GRID_SIZE + 2); 
+const STROKE = CELL / 12; 
+const DOT = STROKE; 
 const MARGIN = HEIGHT - (GRID_SIZE + 1) * CELL; // MARGENES
 
 // COLORES 
@@ -195,28 +195,27 @@ function volverJugar(){
  }
 
  function highlightGrid(ev) {
-     if ( timeEnd > 0) {
-         return;
-     }
-     // get mouse position relative to the canvas
-     let x = ev.clientX - canvRect.left;
-     let y = ev.clientY - canvRect.top;
+    if ( timeEnd > 0) {
+        return;
+    }
 
-     // highlight the square's side
-     highlightSide(x, y);
+    let x = ev.clientX - canvRect.left;
+    let y = ev.clientY - canvRect.top;
+
+    highlightSide(x, y);
  }
 
  function highlightSide(x, y) {
-     // clear previous highlighting
-     for (let row of squares) {
-         for (let square of row) {
-             square.highlight = null;
-         }
-     }
-     // check each cell
-     let rows = squares.length;
-     let cols = squares[0].length;
-     currentCells = [];
+    for (let row of squares) {
+        for (let square of row) {
+            square.highlight = null;
+        }
+    }
+
+    let rows = squares.length;
+    let cols = squares[0].length;
+    currentCells = [];
+
      OUTER: for (let i = 0; i < rows; i++) {
          for (let j = 0; j < cols; j++) {
              if (squares[i][j].contains(x, y)) {
@@ -245,13 +244,11 @@ function volverJugar(){
                      neighbour = false;
                  }
 
-                 // highlight neighbour
                  if (neighbour) {
                      squares[row][col].highlight = highlight;
                      currentCells.push({row: row, col: col});
                  }
 
-                 // no need to continue
                  break OUTER;
              }
          }
@@ -264,7 +261,6 @@ function volverJugar(){
      scoreComp = 0;
      scorePlay = 0;
      timeEnd = 0;
-     // set up the squares
      squares = [];
      for (let i = 0; i < GRID_SIZE; i++) {
          squares[i] = [];
@@ -278,7 +274,7 @@ function selectSide() {
     if (currentCells == null || currentCells.length == 0) {
         return;
     }
-     // select the side(s)
+
      let filledSquare = false;
      for (let cell of currentCells) {
          if (squares[cell.row][cell.col].selectSide()) {
@@ -288,22 +284,20 @@ function selectSide() {
     
     currentCells = [];
 
-     // check for winner
-     const DELAY_END = 10; // EL NUEVO JUEGO COMIENZA EN DOS SEGUNDOS
+     const DELAY_END = 10; 
     
      if (filledSquare) {
          if (scorePlay + scoreComp == GRID_SIZE * GRID_SIZE) {
-             // game over
+           
              timeEnd = Math.ceil(DELAY_END * FPS);
              
          }
      } else {
-        // next player's turn
         playersTurn = !playersTurn;
     }
    
  }
-// create the Square object constructor
+
  function Square(x, y, w, h) {
      this.w = w;
      this.h = h;
@@ -327,14 +321,12 @@ function selectSide() {
          if (this.owner == null) {
              return;
          }
-         // light background
          ctx.fillStyle = getColor(this.owner, true);
          ctx.fillRect(
              this.left + STROKE, this.top + STROKE,
              this.w - STROKE * 2, this.h - STROKE * 2
          );
 
-         // owner text
          drawText(
              getText(this.owner, true),
              this.left + this.w / 2,
@@ -362,11 +354,9 @@ function selectSide() {
      }
 
      this.drawSides = function() {
-         // highlighting
          if (this.highlight != null) {
              this.drawSide(this.highlight, getColor(playersTurn, true));
          }
-         // selected sides
          if (this.sideBot.selected) {
              this.drawSide(Side.BOT, getColor(this.sideBot.owner, false));
          }
@@ -382,16 +372,13 @@ function selectSide() {
      }
 
      this.highlightSide = function(x, y) {
-         // calculate the distances to each side
          let dBot = this.bot - y;
          let dLeft = x - this.left;
          let dRight = this.right - x;
          let dTop = y - this.top;
 
-         // determine closest value
          let dClosest = Math.min(dBot, dLeft, dRight, dTop);
 
-         // highlight the closest if not already selected
          if (dClosest == dBot && !this.sideBot.selected) {
              this.highlight = Side.BOT;
          } else if (dClosest == dLeft && !this.sideLeft.selected) {
@@ -402,7 +389,6 @@ function selectSide() {
              this.highlight = Side.TOP;
          }
 
-         // return the highlighted side
          return this.highlight;
     }
 
@@ -410,7 +396,6 @@ function selectSide() {
          if (this.highlight == null) {
              return;
          }
-         // select the highlighted side
          switch (this.highlight) {
              case Side.BOT:
                  this.sideBot.owner = playersTurn;
@@ -430,23 +415,20 @@ function selectSide() {
                  break;
          }
          this.highlight = null;
-// increase the number of selected
          this.numSelected++;
+
          if (this.numSelected == 4) {
              this.owner = playersTurn;
 
-             // increment score
              if (playersTurn) {
                  scorePlay++;
              } else {
                  scoreComp++;
              }
 
-             // filled
-             return true;
-         }
+            return true;
+        }
 
-         // not filled
-         return false;
+        return false;
     }
 }
