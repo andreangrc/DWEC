@@ -88,6 +88,11 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 ![PlanPruebas](recursos/PlanPruebas.PNG)
 
 
+---
+
+### --> GIFS:
+
+
 
 ![GIF1](recursos/GIF1.gif)
 
