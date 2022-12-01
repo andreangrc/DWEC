@@ -46,8 +46,11 @@ Las siglas DOM significan `Document Object Model`, o lo que es lo mismo, la estr
 
 En Javascript, cuando nos referimos al DOM nos referimos a esta estructura, que podemos modificar de forma dinámica desde Javascript.
 
+## -> .onclick()
+El evento `onclick` ejecuta una cierta funcionalidad cuando se hace clic en un botón. Esto podría ocurrir cuando un usuario envía un formulario, cuando cambias cierto contenido de la página web y otras cosas por el estilo.
+Se coloca la función JavaScript que deseas ejecutar dentro de la etiqueta de apertura del botón.
 
-
+      <button onclick="myFunction()">Click me</button>
             
 ---
 
