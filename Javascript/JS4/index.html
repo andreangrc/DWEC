@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS4</title>
+  <style>
+    @font-face {
+        font-family: "Pokemon Solid";
+        src: url("recursos/pokemonsolidnormal.ttf");
+    }
+
+    * {
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        background-color: #FDFD96;
+    }
+
+    #input {
+    }
+
+    .imagen{
+        width:30%;
+        display: block;
+        margin: auto;
+    }
+
+    table {
+        border: 2px solid blue;
+        display:flex;
+        justify-content: center;
+        margin:40px;
+        border-collapse: separate;
+        border-spacing: 120px 5px;
+    }
+
+    th {
+        font-family: "Pokemon Solid";
+        letter-spacing: 3px;
+    }
+
+    td {
+        text-align: center;
+        font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+    <img src="recursos/pokemon.png" class="imagen">
+    <br>
+    <input type="text" placeholder="Buscar Pokemon" id="input"/>
+    <button id="boton" onclick="buscarPokemon()">Buscar pokemon</button>
+    <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Sprite</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Versión</th>
+          <th>Tipo</th>
+        </tr>
+        <tr>
+          <td id="name"></td>
+          <td id="sprite"></td>
+          <td id="height"></td>
+          <td id="weight"></td>
+          <td id="version"></td>
+          <td id="type"></td>
+        </tr>
+    </table>
+  <script src="main.js"></script>
+</body>
+</html>
