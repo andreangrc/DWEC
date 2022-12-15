@@ -24,8 +24,38 @@
 
 
 ## -> POKEAPI 🐾
-      
+He estado analizando la PokeApi y probando cuáles son las peticiones que tengo que hacer para sacar la información de cada pokemon.
+Debemos usar Postman para ayudarnos a sacarlo.
 
+      - "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0" -> Para sacar todos los pokémons.
+      - "https://pokeapi.co/api/v2/pokemon/ditto" -> Para sacar la información del pokemon en concreto, en este caso `Ditto`.
+         En este caso cuando hacemos esta petición a la PokeApi, sale está información:
+                       
+                       
+![DITTO](recursos/ditto.PNG)             
+
+En el caso del ejercicio debemos sacar:
+
+            - Sprite.
+            - Nombre.
+            - Altura.
+            - Peso.
+            - Listado del nombre de las versiones en las que aparece.
+            - Tipo/s.
+            
+En el caso del nombre -> debemos coger `nombre`.
+
+En el caso del sprite -> debemos coger `sprites`. y luego `front_default` (sprites.front_default).
+
+En el caso de la altura -> debemos coger `height`.
+
+En el caso del peso -> debemos coger `weight`.
+
+En el caso de las versiones -> debemos coger `version`.
+
+En el caso del tipo o tipos -> debemos coger `types`.
+      
+      
 
 ## -> POSTMAN ✒️
       Postman es una aplicación que nos permite testear APIs a través de una interfaz gráfica de usuario. 
@@ -33,6 +63,16 @@
       Postman es una herramienta fácil de usar que nos ayuda a optimizar el tiempo de ejecución de pruebas.
 
 
+-> XHR: 
+      
+El objeto XMLHttpRequest se creó originalmente para realizar peticiones HTTP a ficheros .xml externos desde Javascript. Actualmente, se realizan las mismas operaciones pero con ficheros JSON, ya que son mucho más habituales en el ecosistema Javascript como almacenamiento ligero de datos.
+
+El mecanismo principal de peticiones HTTP mediante XMLHttpRequest es muy sencillo, aunque se vuelve un poco más complejo a medida que vamos realizando comprobaciones y detalles relacionados, ya que se realiza todo más a bajo nivel que su equivalente moderno fetch.
+
+El primer paso es crear un objeto XMLHttpRequest (XHR):
+
+      // Creamos la instancia del objeto XHR
+      const client = new XMLHttpRequest();
 
 
 
