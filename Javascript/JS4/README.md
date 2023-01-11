@@ -1,7 +1,7 @@
 # JAVASCRIPT
 
 
-> *BOLETÍN JS3 AVANZADO* ☝️
+> *BOLETÍN JS4 INTERMEDIO* ☝️
 
 
 ---
@@ -9,42 +9,70 @@
 
 ## 🔎  ANÁLISIS DEL PROBLEMA.
 
-### JUEGO TIMBIRICHE 🕹️
-Estos son los pasos y apartados que debemos seguir para este juego:
-
-      1. Realizar el juego del Timbiriche en el navegador mediante Javascript, 
-      apoyándose de la documentación suministrada. Las reglas del juego serán las siguientes:
+      1. Analizar la PokeAPI y comprobar cuales son las peticiones que son necesarias para realizar los posteriores ejercicios. 
+      Esto deberá estar documentado en la fase de Análisis.
       
-         - El tablero tendrá 9 puntos.
-         - Cada jugador solo debe colocar una raya de su color por turno.
-         - No se puede colocar la misma raya más de una vez.
-         - El juego termina cuando no quedan más opciones.
-         - Un jugador podrá conseguir un Cuadrado cuando en su turno complete la raya faltante de un cuadrado.
-         - El ganador de la partida será aquel que complete más cuadrados.
-         
-      2. El ganador de la partida sumará un punto a su contador y aparecerá un aviso de si se quiere volver a jugar.
+      2. La aplicación contendrá los siguientes elementos visuales:
+      Un campo de texto editable donde al introducir el nombre de un pokemon (sin tener en cuenta si es en mayúsculas o minúsculas),
+      se obtendrá la información del Pokémon que se indica a continuación.
+            - Sprite del Pokémon buscado.
+            - Nombre del Pokémon buscado.
+            - Altura del Pokémon buscado.
+            - Peso del Pokémon buscado.
+            - Listado del nombre de las versiones en las que aparece el Pokémon buscado.
+            - Tipo/s del Pokémon buscado.
+
+
+## -> POKEAPI 🐾
+He estado analizando la PokeApi y probando cuáles son las peticiones que tengo que hacer para sacar la información de cada pokemon.
+Debemos usar Postman para ayudarnos a sacarlo.
+
+      - "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0" -> Para sacar todos los pokémons.
+      - "https://pokeapi.co/api/v2/pokemon/ditto" -> Para sacar la información del pokemon en concreto, en este caso `Ditto`.
+         En este caso cuando hacemos esta petición a la PokeApi, sale está información:
+                       
+                       
+![DITTO](recursos/ditto.PNG)             
+
+En el caso del ejercicio debemos sacar:
+
+            - Sprite.
+            - Nombre.
+            - Altura.
+            - Peso.
+            - Listado del nombre de las versiones en las que aparece.
+            - Tipo/s.
+            
+En el caso del nombre -> debemos coger `nombre`.
+
+En el caso del sprite -> debemos coger `sprites`. y luego `front_default` (sprites.front_default).
+
+En el caso de la altura -> debemos coger `height`.
+
+En el caso del peso -> debemos coger `weight`.
+
+En el caso de las versiones -> debemos coger `version`.
+
+En el caso del tipo o tipos -> debemos coger `types`.
       
-      3. Diseñar el plan de pruebas y grabar con .gif la evidencia de su ejecución manual.
+      
+
+## -> POSTMAN ✒️
+      Postman es una aplicación que nos permite testear APIs a través de una interfaz gráfica de usuario. 
+      Entre las ventajas que tiene Postman encontramos la capacidad de crear colecciones y distintos ambientes de pruebas.
+      Postman es una herramienta fácil de usar que nos ayuda a optimizar el tiempo de ejecución de pruebas.
 
 
-Tras analizar el problema y ver que debo hacer para hacer este juego, he visto ejemplos y la mayoría de personas lo hacen con Canvas.
+-> XHR: 
+      
+El objeto XMLHttpRequest se creó originalmente para realizar peticiones HTTP a ficheros .xml externos desde Javascript. Actualmente, se realizan las mismas operaciones pero con ficheros JSON, ya que son mucho más habituales en el ecosistema Javascript como almacenamiento ligero de datos.
 
-## -> CANVAS✒️
-        <canvas id="tutorial" width="150" height="150"></canvas>
+El mecanismo principal de peticiones HTTP mediante XMLHttpRequest es muy sencillo, aunque se vuelve un poco más complejo a medida que vamos realizando comprobaciones y detalles relacionados, ya que se realiza todo más a bajo nivel que su equivalente moderno fetch.
 
+El primer paso es crear un objeto XMLHttpRequest (XHR):
 
-A primera vista, un elemento `canvas` es parecido al elemento `img`, con la diferencia que este no tiene los atributos src y alt. 
-El elemento `canvas` tiene solo dos atributos: `width y height`. Ambos son opcionales y pueden ser definidos usando propiedades DOM.
-Cuando los atributos ancho y alto no estan especificados, el lienzo se inicializara con 300 pixels ancho y 150 pixels de alto. 
-El elemento puede ser arbitrariamente redimensionado por CSS, pero durante el renderizado la imagen es escalada para ajustarse al tamaño de su layout. 
-Si el tamaño del CSS no respeta el ratio del canvas inicial, este aparecerá distorsionado.
-
-
-
-## -> DOM 📰
-Las siglas DOM significan `Document Object Model`, o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por múltiples etiquetas HTML, anidadas una dentro de otra.
-
-En Javascript, cuando nos referimos al DOM nos referimos a esta estructura, que podemos modificar de forma dinámica desde Javascript.
+      // Creamos la instancia del objeto XHR
+      const client = new XMLHttpRequest();
 
 
 
@@ -55,8 +83,8 @@ En Javascript, cuando nos referimos al DOM nos referimos a esta estructura, que 
 
 ## ✏️ DISEÑO DE LA SOLUCIÓN.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es poner en práctica todo lo buscado en `Análisis del problema`. 
-A continuación, he buscado ejemplos de como hacer un tablero en canvas y de como realizar el juego y finalmente he realizado el diagrama de flujo.
+Para realizar este apartado de Tarea INTERMEDIA, lo primero que he hecho es poner en práctica todo lo buscado en `Análisis del problema`. 
+A continuación, he vuelto a ver el vídeo del profesor, he buscado información en internet y finalmente he realizado el diagrama de flujo.
 
 
 ### DIAGRAMA DE FLUJO 📈
@@ -72,7 +100,7 @@ A continuación, he buscado ejemplos de como hacer un tablero en canvas y de com
 
 ## 📝 IMPLEMENTACIÓN.
 
-En este apartado vamos a ponernos a implementar todos los apartados anteriores, vamos a hacer el juego completo, el plan de pruebas y los gifs de cada prueba.
+En este apartado vamos a ponernos a implementar todos los apartados anteriores, vamos a hacer el ejercicio completo, el plan de pruebas y a grabar los GIFS.
 
 
 ---
@@ -96,25 +124,11 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 ![GIF1](recursos/GIF1.gif)
 
-                                                                       TESTID 1: Gana jugador 1.
+                                                                       TESTID 1: CASO OK.
 
 
 
 ---
 ![GIF2](recursos/GIF2.gif)
 
-                                                                       TESTID 2: Gana jugador 2.
-                                          
-                                          
-                                          
-                                          
----
-![GIF3](recursos/GIF3.gif)
-
-                                                                        TESTID 3: Empate.
-
-
-                                  
-
-
-
+                                                                       TESTID 2: CASO KO.
