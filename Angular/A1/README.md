@@ -11,38 +11,23 @@
 
 ## 🔎 Análisis del problema.
 
+     -> Se requiere realizar los siguientes ejercicios:
+          1. Seguir los pasos de instalación del vídeo suministrado “Instalación Angular.mp4”.
+          2. Crear los componentes que se indican en la siguiente imagen con la ayuda del vídeo “Componentes Angular.mp4”.
+          3. Añadir las verificaciones de cada input-botón mostrando un error en caso de que no se cumplan:
+              - Email: Debe ser un email con su @ y otras validaciones. Buscar en internet. No debe estar vacío.
+              - Password: No deben mostrarse los caracteres, sólo los puntos. No debe estar vacío.
+              - Last Name: Puede estar vacío. Es un input normal.
+              - First Name: No puede estar vacío. Es un input normal.
+              - Botón con texto: Puede estar habilitado o deshabilitado.
+              - Hiperenlace: Mostrará diferentes textos.
+          4. Añadir un componente que se pueda utilizar para el proyecto individual.
+          5. Realizar un boceto de cada una de las pantallas que se vayan a utilizar en el proyecto individual con la finalidad 
+             de reutilizar este trabajo y así reducir el esfuerzo total.
 
-Se requieren crear un script de JavaScript que contenga un método de generación de datos de una tabla expuesta a la web con el método ‘document.write(variable);’.
-A continuación, se deberá representar en un HTML todos los datos que se generen en el método previamente generado para rellenar los datos de una tabla HTML.
 
-Primero vamos a analizar cada uno de los términos y saber su definición:
-## -> <script>
-  El elemento HTML Script (<script>) se utiliza para insertar o hacer referencia a un script ejecutable dentro de un documento HTML o XHTML.
-
-  Los scripts sin atributo async o defer, así como las secuencias de comandos en línea, son interpretados y ejecutados inmediatamente, antes de que el navegador        continúe procesando la página.
-  
-## -> document.write()
-  El método document.write() escribe una cadena de texto en un flujo de documentos abierto por document.open().
-  
-  > Ejemplo:
-  
-      <html lang="en">
-      <head>
-        <title>Write example</title>
-
-        <script>
-          function newContent() {
-            document.open();
-            document.write("<h1>Out with the old, in with the new!</h1>");
-            document.close();
-          }
-        </script>
-      </head>
-
-      <body onload="newContent();">
-        <p>Some original document content.</p>
-      </body>
-    </html>
+Primero instalaremos Angular con las indicaciones del profesor y con ayuda del vídeo.
+Luego creamos los componentes (Login, registro y footer).
     
   ## -> inner.HTML
   La propiedad Element.innerHTML devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
@@ -76,7 +61,7 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 ---
 
-
+![FOTO1](recursos/EJERCICIO5.PNG)
 
 
 ## 💡 Pruebas.
