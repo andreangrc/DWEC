@@ -62,7 +62,7 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 -> Plan de pruebas:
 
-![Plan1](recursos/PlandePruebas.png)
+![Plan1](recursos/PlandePruebas.PNG)
 
 --
 
