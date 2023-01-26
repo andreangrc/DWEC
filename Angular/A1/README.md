@@ -60,6 +60,13 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 ## 💡 Pruebas.
 
+-> Plan de pruebas:
+
+![Plan1](recursos/PlandePruebas.png)
+
+--
+
+
 ### -> LOGIN:
 
 ![GIF1](recursos/GIF1.gif)
