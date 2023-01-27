@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Open+Sans&display=swap');
+
+* {
+  margin: 0px;
+  /* Sin margenes */
+  padding: 0px;
+  /* Padding nos crea espacios alrededor del contenido del elemento seleccionado */
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+  /* Fuente de la página */
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  /* Color página completa */
+  width: 100%;
+  /* Anchura */
+  place-items: center;
+  /* Alineación al centro */
+}
+
+/* CUERPO */
+.cuerpo {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.form-body {
+  width: 400px;
+  min-width: 300px;
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: solid 3px #843c9c;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.form-body img {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+.text {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 25px;
+}
+
+.form-body input {
+  display: block;
+  margin: auto;
+  height: 45px;
+  width: 75%;
+  padding-left: 10px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: transparent;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  font-weight: bold;
+}
+
+.form-body input[type="password"] {
+  margin-top: 20px;
+}
+
+.form-body input:hover {
+  transition: .5s;
+  border: 1px solid #843c9c;
+  color: black;
+}
+
+.form-body button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 78%;
+  background: transparent;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #883884;
+  background: linear-gradient(#843c9c, #883884);
+}
+
+.form-body button a {
+  color: white;
+}
+
+.form-body button:hover {
+  color: black;
+  font-weight: bold;
+  border: 2px solid #883884;
+  background: white;
+}
+
+.form-body button:hover a {
+  color: black;
+  font-weight: bold;
+  background: white;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #d8d7d7;
+  border-collapse: separate;
+  border-spacing: 520px 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 15px;
+  color: black;
+}
+
