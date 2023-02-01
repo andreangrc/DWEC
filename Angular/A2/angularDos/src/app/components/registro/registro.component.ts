@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'registro',
+  selector: 'register',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
