@@ -1,0 +1,93 @@
+/* BARRA MENÚ*/
+
+nav {
+  width:100%;                                                      /* Anchura de la barra de navegación */
+  position:relative;
+  margin:auto;                                                     /* Margenes automáticos */
+  top:0;
+  left:0;
+  background-color:#03c6fc;                                           /* Color de fondo */
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+  border: 0px solid rgba(0,0,0,0.1);                               /* Bordes menú */
+  text-align: center;                                              /* Textos alineados al centro */
+}
+
+nav a:hover {                                                        /* Navegador cuando lo seleccionas */
+  background-color: rgba(0,0,0,0.15);
+  color: rgba(108, 52, 131);                                       /* Color de la letra */
+  font-weight: bold;                                               /* Letras en negrita */
+      font-size: 21px;
+  transform: scale(1);                                             /* Se amplía cuando seleccionamos */
+  padding-left: 18px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);                    /* Efectos de sombra */
+}
+
+nav ul {
+  list-style: none;
+  position: relative;
+  left: 40px;
+  text-align: center;
+  margin-right: 90px;
+  display: inline-table;                                            /* Esto nos ayuda a colocar las cajas como si fueran celdas de tablas */
+}
+
+nav ul li {
+  float:left;
+  transition: all .2s ease-in-out;
+}
+
+nav ul li:hover > ul {
+  display: block;                                                   /* Esto nos ayuda a colocar las cajas como si fueran celdas de tablas */
+      margin-left: 16px;                                                /* Margen izquierdo */
+}
+
+nav ul li a {
+  float:left;
+  transition: all .2s ease-in-out;
+}
+
+nav ul li a {
+  display:block;                                                    /* Esto nos ayuda a colocar las cajas como si fueran celdas de tablas */
+  padding: 30px 20px;
+  color: #222;
+  font-size: .9em;
+  letter-spacing: 1px;                                              /* Espacio entre las letras */
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li ul li a:hover {
+  background-color: rgba(0,0,0,0.15);                               /* Color de fondo al seleccionar el submenu */
+  color: rgba(108, 52, 131);                                        /* Color de la letra del submenu */
+  font-weight: bold;                                                /* Letra negrita */
+  transform: scale(1);                                              /* Ampliación al seleccionar */
+  padding-left: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+nav ul ul {
+  display:none;                                                      /* Sin display */
+  background: #FFF;
+  position: absolute;
+  top: 100%;
+  box-shadow: -3px 3px 10px -2px rgba(0,0,0,0.1);                    /* Sombras */
+}
+
+nav ul ul li {
+  float: none;
+  position: relative;
+}
+
+nav ul ul li a {
+  padding: 15px 30px;                                               /* Padding nos crea espacios alrededor del contenido del elemento seleccionado */
+  border-bottom: 1px solid rgba(0,0,0,0.5);                         /* Borde de los botones */
+}
+
+nav ul ul ul {
+  position: absolute;
+  left:100%;
+  top:0;
+}
