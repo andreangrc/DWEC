@@ -64,20 +64,9 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 ![GIF1](recursos/GIF1.gif)
 
                                                                           CASO OK:
-                                                            Dado que tengo un método generaDatos(5, 4)
-                                                            Cuando pongo los valores fila 5 y columna 4
-                                       Entonces me aparece en el html una tabla con 5 filas y 4 columnas con datos randoms.
+                                           Abrimos la página principal y podremos navegar por cada una de las páginas 
+                                                           a través del menú de navegación y los botones.
 
 
 
----
-
-
-
-
-
-
-
-
----
 
