@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ButtonComponent } from './components/button/button.component';
+import { ButtonLoginComponent } from './components/button-login/buttonLogin.component';
 import { HomePage } from './pages/home/home.component';
 import { LoginPage } from './pages/login-page/login-page.component';
 import { RegisterPage } from './pages/register-page/register-page.component';
@@ -20,6 +21,7 @@ import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
   declarations: [
     AppComponent,
     ButtonComponent,
+    ButtonLoginComponent,
     LoginComponent,
     FooterComponent,
     NavBarComponent,

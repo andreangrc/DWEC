@@ -1,0 +1,32 @@
+button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 78%;
+  background: transparent;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #883884;
+  background: linear-gradient(#843c9c, #883884);
+}
+
+button a {
+  color: white;
+}
+
+button:hover {
+  color: black;
+  font-weight: bold;
+  border: 2px solid #883884;
+  background: white;
+}
+
+button:hover a {
+  color: black;
+  font-weight: bold;
+  background: white;
+}
