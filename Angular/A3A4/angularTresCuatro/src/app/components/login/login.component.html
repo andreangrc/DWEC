@@ -1,0 +1,13 @@
+<div class="cuerpo" id="login">
+  <div class="form-body">
+    <img src="../../assets/foto_user1.jpg" alt="user-login">
+    <p class="text">Bienvenid@</p>
+    <form action="home" class="login-form">
+      <input type="email" id="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      <input type="password" placeholder="Contraseña*" required>
+      <button class="inicia">INICIA SESIÓN</button>
+      <h1>¿Aún no tienes cuenta?<a [routerLink]="['/register']"> Regístrate.</a></h1>
+      <br>
+    </form>
+  </div>
+</div>
