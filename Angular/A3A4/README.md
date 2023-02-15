@@ -1,27 +1,36 @@
 # ANGULAR 
 
-> *BOLETÍN A2 AVANZADO* ☝️
-
+> *BOLETÍN A3A4 INTERMEDIO* ☝️
 
 
 ---
 
 
-
 ## 🔎 Análisis del problema.
 
-     -> Se requiere realizar el siguiente ejercicio:
-         Siguiendo el boceto del anterior boletín avanzado o suministrando uno más actualizado para el proyecto individual.
-         Establecer toda la navegación entre componentes o páginas del proyecto individual, 
-         aplicando las validaciones que se vean oportunas en el caso que toque.
+     -> Se requiere realizar los siguientes ejercicios:
+     
+          - Aplicar los conceptos dados en la teoría para ampliar las funcionalidades del proyecto utilizando las directivas explicadas
+               y la comunicación entre componentes.
+          - Investigar sobre las directivas ngStyle, ngClass y ngTemplate y darle un uso en el proyecto si se viese necesario.
+          
+          Este boletín también va enfocado al uso de la recogida de datos mediante servicios,
+          para ello se creará una nueva página que contenga los siguientes elementos:
+          
+          - Desplegable con las opciones Fuego (Fire), Agua (Water), Hierba (Grass). Opción de Fuego (Fire) por defecto seleccionado.
+          - Un listado de los nombres de los Pokemons del tipo seleccionado en el desplegable arriba mencionado. 
+               Los nombres serán hipervínculos que al ser seleccionados nos lleve a la url que viene informado en el servicio.
+          Para realizar este ejercicio será necesario el uso de la Pokeapi que vimos en anteriores sprints. https://pokeapi.co/
+          La petición de filtrado por tipos existe, por lo que tenéis que destinar unos minutos en averiguar cuál es
+               la url necesaria para recoger esos datos.
 
 
-Primero crearemos la carpeta pages y meteremos en carpetas cada una de las páginas de mi proyecto final, después meteremos los componentes dentro de esas páginas.
-Debemos utilizar `routerLink` para unir las páginas y los `path` en `app-routing.module.ts`.
+### -> `ngStyle`
 
-### -> routerLink:
-Cuando se aplica a un elemento en una plantilla, convierte ese elemento en un enlace que inicia la navegación a una ruta. La navegación abre uno o más componentes enrutados en una o más ubicaciones en la página.`<router-outlet>`
-    
+### -> `ngClass`
+
+### -> `ngTemplate`
+
 
 
 ---
