@@ -1,0 +1,32 @@
+ /* Estilos para el desplegable */
+ .dropdown {
+  padding-top: 50px;
+  position: relative;
+  display: inline-block;
+  display:flex;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos para las opciones */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Estilos para la opción seleccionada por defecto */
+.dropdown-content a.default {
+  background-color: orange;
+  color: white;
+}

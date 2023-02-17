@@ -16,6 +16,7 @@ import { AppointmentPage } from './pages/appointment-page/appointment-page.compo
 import { MerchandisingPage } from './pages/merchandising-page/merchandising-page.component';
 import { ProductPage } from './pages/product-page/product-page.component';
 import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
+import { DesplegableComponent } from './components/desplegable/desplegable.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
     ProductPage,
     RegisterPage,
     TattoosPage,
+    DesplegableComponent,
   ],
   imports: [
     BrowserModule,
