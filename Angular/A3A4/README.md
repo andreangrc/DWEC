@@ -25,11 +25,37 @@
                la url necesaria para recoger esos datos.
 
 
-### -> `ngStyle`
+### -> `ngStyle`:
 
-### -> `ngClass`
+Una directiva de atributo que actualiza los estilos del elemento HTML que lo contiene. Establece una o más propiedades  de estilo, 
+especificadas como pares clave-valor separados por dos puntos. La clave es un nombre de estilo, con un `.<unit>` sufijo opcional.
+El valor es una expresión a evaluar. El valor no nulo resultante, expresado en la unidad dada, se asigna a la propiedad de estilo dada.
+Si el resultado de la evaluación es nulo, se elimina el estilo correspondiente.
+          
+Ej: ` <some-element [ngStyle]="{'font-style': styleExp}">...</some-element> `
 
-### -> `ngTemplate`
+
+### -> `ngClass`: 
+
+La ngClassdirectiva le permite establecer dinámicamente clases CSS en un elemento HTML mediante el enlace de datos de una expresión 
+que representa todas las clases que se agregarán. La directiva opera de tres maneras diferentes, dependiendo de cuál de los tres tipos 
+se evalúa a la expresión:
+- Si la expresión se evalúa como una cadena, la cadena debe ser uno o más nombres de clase delimitados por espacios.
+
+- Si la expresión se evalúa como un objeto, entonces para cada par clave-valor del objeto con un valor verdadero, la clave correspondiente se usa como nombre de clase.
+
+- Si la expresión se evalúa como una matriz, cada elemento de la matriz debe ser una cadena como en el tipo 1 o un objeto como en el tipo 2. Esto significa que puede mezclar cadenas y objetos en una matriz para tener más control sobre lo que Aparecen las clases CSS. Vea el código a continuación para ver un ejemplo de esto.
+
+La directiva no agregará clases duplicadas si ya se configuró una clase en particular. Cuando la expresión cambia,
+las clases agregadas previamente se eliminan y solo entonces se agregan las nuevas clases.
+
+Ej: `<some-element [ngClass]="'first second'">...</some-element>`
+
+`<some-element [ngClass]="['first', 'second']">...</some-element>`
+
+
+### -> `ngTemplate`:
+
 
 
 
