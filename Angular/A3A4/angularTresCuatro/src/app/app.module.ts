@@ -17,6 +17,8 @@ import { MerchandisingPage } from './pages/merchandising-page/merchandising-page
 import { ProductPage } from './pages/product-page/product-page.component';
 import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
 import { DesplegableComponent } from './components/desplegable/desplegable.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,12 @@ import { DesplegableComponent } from './components/desplegable/desplegable.compo
     RegisterPage,
     TattoosPage,
     DesplegableComponent,
+    PokemonListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { Pokemon } from '../models/Pokemon';
 import { Global } from './global';
 
 @Injectable()
-export class AnimeService {
+export class PokemonService {
   public url: string;
 
   constructor (private _http:HttpClient){
