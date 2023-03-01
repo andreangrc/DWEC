@@ -1,6 +1,12 @@
-<ul>
-  <li *ngFor="let pokemon of pokemon">
-    <a href="{{ pokemon.url }}">{{ pokemon.name }}</a>
-  </li>
-</ul>
+<table>
+  <br>
+  <h1>POKEMONS</h1>
+  <tr *ngFor="let pokemon of pokemons">
+    <td>
+      {{pokemon.pokemon.name}}
+    </td>
+  <td>
+    <td><a href="{{pokemon.pokemon.url}}">{{pokemon.pokemon.url}}</a></td>
+  </tr>
+</table>
 

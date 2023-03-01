@@ -1,8 +1,10 @@
-<!--<label>Selecciona el tipo que quieres elegir:</label>-->
+<label>Selecciona el tipo que quieres elegir:</label>
 <div class="dropdown">
-  <select>
-    <option value="fire" selected>Fuego (Fire)</option>
-    <option value="water">Agua (Water)</option>
-    <option value="grass">Hierba (Grass)</option>
+  <select (change)="changePokemons($event)" name="pokemons" id="pokemons">
+    <option value="10" selected>Fuego (Fire) </option>
+    <option value="11">Agua (Water) </option>
+    <option value="12">Hierba (Grass) </option>
   </select>
 </div>
+
+<!--<p><span>Has elegido el tipo: </span><b>{{selectType}}</b></p>-->

@@ -11,33 +11,30 @@ import { PokemonService } from '../../services/pokemon-service';
 })
 
 export class PokemonListComponent implements OnInit {
-
-  // @Inpunt public pokemons: Array<any>;
   @Input() public nombre: String;
 
   @Input() public url: Pokemon[];
   pokemon: any;
+  pokemons: any;
 
   constructor(private _PokemonService: PokemonService) {
     this.nombre = "";
     this.url = [];
   }
 
-  ngOnInit(): void {
-      this._PokemonService.getPokemons().subscribe(
-        response => {
-          for (var i = 0; i < response.pokemon.length; i++) {
-            console.log(response.pokemon[i].pokemon.name);
-            console.log(response.pokemon[i].pokemon.url);
-            this.pokemon[i] = new Pokemon(
-              response.pokemon[i].pokemon.name,
-              response.pokemon[i].pokemon.url
-            );
-          }
-        },
-        error => {
-          console.log(error);
+  ngOnInit() :void{
+    this._PokemonService.getPokemons().subscribe(
+      response => {
+
+        for(var pokemon in response.pokemon) {
+          var item=response.pokemon[pokemon];
+           this.pokemons=response.pokemon;
+            console.log(item);
         }
-      )
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 }
