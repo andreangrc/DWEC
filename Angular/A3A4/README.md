@@ -56,8 +56,13 @@ Ej: `<some-element [ngClass]="'first second'">...</some-element>`
 
 ### -> `ngTemplate`:
 
+La `ngTemplate` puede definir el contenido de la plantilla que Angular solo representa cuando usted, ya sea directa o indirectamente, le indica específicamente que lo haga, lo que le permite tener un control total sobre cómo y cuándo se muestra el contenido.
 
-
+Ej: `<p>Hip!</p>
+     <ng-template>
+     <p>Hip!</p>
+     </ng-template>
+     <p>Hooray!</p>`
 
 ---
 
@@ -65,9 +70,12 @@ Ej: `<some-element [ngClass]="'first second'">...</some-element>`
 
 ## ✏️ Diseño de la solución.
 
-Para realizar este apartado de Tarea AVANZADA, lo primero que he hecho es crear la carpeta pages de cada vista de mi proyecto, luego he añadido los componentes dentro y finalmente los he unido con `routerLink` y los `path`.
+Para realizar este apartado de Tarea INTERMEDIA, lo primero que he hecho es buscar los conceptos que debíamos buscar y poner un ejemplo. Después he hecho el ejercicio de los pokemons.
 
-![FOTO1](recursos/EJERCICIO5.PNG)
+###  UML
+![FOTO1](recursos/UML.JPG)
+
+
 
 
 
