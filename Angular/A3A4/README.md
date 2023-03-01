@@ -98,7 +98,7 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 ### -> PLAN DE PRUEBAS:
 
-![PLANPRUEBAS](recursos/PlanPruebas.PNG)
+![PLANPRUEBAS](recursos/PlanPruebas.JPG)
 
 
 
