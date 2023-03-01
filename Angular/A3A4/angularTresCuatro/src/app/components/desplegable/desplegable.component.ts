@@ -1,17 +1,25 @@
-import { Component } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon-service';
+import { Component, OnInit } from '@angular/core';
+import { PokemonListComponent } from '../pokemon-list/pokemon-list.component';
 
 @Component({
   selector: 'app-desplegable',
-  providers: [PokemonService],
   templateUrl: './desplegable.component.html',
   styleUrls: ['./desplegable.component.css']
 })
+export class DesplegableComponent implements OnInit {
 
-export class DesplegableComponent {
-  private _PokemonService: any;
-  changePokemons(event:Event) {
-    this._PokemonService.type=(event.target as HTMLInputElement).value;
-    console.log(this._PokemonService.type);
+  _pokeComp: PokemonListComponent;
+
+  constructor(_pokeComp: PokemonListComponent){
+    this._pokeComp = _pokeComp;
   }
+
+  ngOnInit(): void {
+    this._pokeComp.changePokemons("10");
+  }
+
+  changePokemons(event:Event) {
+    this._pokeComp.changePokemons((event.target as HTMLInputElement).value);
+  }
+
 }

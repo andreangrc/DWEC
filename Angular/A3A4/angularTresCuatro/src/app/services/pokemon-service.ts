@@ -1,22 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Pokemon } from '../models/Pokemon';
 import { Global } from './global';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PokemonService {
   public url: string;
-  public type= '10';
-  http: any;
+  public type: string;
 
   constructor (private _http:HttpClient){
     this.url = Global.url;
+    this.type = "10";
   }
 
   getPokemons():Observable<any>{
-    const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8', "credentials": "omit"});
-
-    return this.http.get(this.url+this.type,{ headers: headers, });
+    return this._http.get(this.url+this.type);
   }
 }

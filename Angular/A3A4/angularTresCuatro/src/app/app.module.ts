@@ -19,6 +19,7 @@ import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
 import { DesplegableComponent } from './components/desplegable/desplegable.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonService } from './services/pokemon-service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

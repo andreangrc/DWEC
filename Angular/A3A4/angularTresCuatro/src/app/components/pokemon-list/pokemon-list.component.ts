@@ -1,36 +1,24 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Pokemon } from '../../models/Pokemon';
 import { PokemonService } from '../../services/pokemon-service';
 
 @Component({
   selector: 'app-pokemon-list',
-  providers: [PokemonService],
   templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.css']
+  styleUrls: ['./pokemon-list.component.css'],
+  providers:[PokemonService]
 })
-
-export class PokemonListComponent implements OnInit {
-  @Input() public nombre: String;
-
-  @Input() public url: Pokemon[];
-  pokemon: any;
+export class PokemonListComponent{
   pokemons: any;
 
-  constructor(private _PokemonService: PokemonService) {
-    this.nombre = "";
-    this.url = [];
+  constructor(private _pokemonService: PokemonService) {
   }
 
-  ngOnInit() :void{
-    this._PokemonService.getPokemons().subscribe(
+  changePokemons(type: any) {
+    this._pokemonService.type = type;
+    this._pokemonService.getPokemons().subscribe(
       response => {
-
-        for(var pokemon in response.pokemon) {
-          var item=response.pokemon[pokemon];
-           this.pokemons=response.pokemon;
-            console.log(item);
-        }
+        this.pokemons=response.pokemon;
       },
       error => {
         console.log(error);
