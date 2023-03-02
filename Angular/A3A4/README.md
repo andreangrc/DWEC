@@ -104,11 +104,11 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
 
 ### -> PRUEBAS:
 
-![GIF1](recursos/GIF1.gif)
+![GIF1](recursos/GIF.gif)
 
                                                                           CASO OK:
-                                           Abrimos la página principal y podremos navegar por cada una de las páginas 
-                                                           a través del menú de navegación y los botones.
+                                            Abrimos la página principal y vemos el desplegable con la lista de fuego,
+                                            hacemos click en agua o hierba y se muestra el desplegable de esos tipos.
 
 
 
