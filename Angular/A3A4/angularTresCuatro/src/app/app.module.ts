@@ -16,7 +16,6 @@ import { AppointmentPage } from './pages/appointment-page/appointment-page.compo
 import { MerchandisingPage } from './pages/merchandising-page/merchandising-page.component';
 import { ProductPage } from './pages/product-page/product-page.component';
 import { TattoosPage } from './pages/tattoos-page/tattoos-page.component';
-import { DesplegableComponent } from './components/desplegable/desplegable.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './services/pokemon-service';
@@ -37,7 +36,6 @@ import { PokemonService } from './services/pokemon-service';
     ProductPage,
     RegisterPage,
     TattoosPage,
-    DesplegableComponent,
     PokemonListComponent,
   ],
   imports: [

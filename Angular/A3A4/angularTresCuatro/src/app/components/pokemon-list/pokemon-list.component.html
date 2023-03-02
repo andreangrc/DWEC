@@ -1,12 +1,19 @@
-<table>
-  <br>
-  <h1>POKEMONS</h1>
-  <tr *ngFor="let pokemon of pokemons">
-    <td>
-      {{pokemon.pokemon.name}}
-    </td>
-  <td>
-    <td><a href="{{pokemon.pokemon.url}}">{{pokemon.pokemon.url}}</a></td>
+<div class="mt-8 ml-24">
+  <label class="font-light">Selecciona el tipo que quieres elegir:</label>
+  <div class="dropdown">
+    <select class="bg-yellow-100"(change)="changePokemons($event)" name="pokemons" id="pokemons">
+      <option class="bg-orange-500" value="10" selected>Fuego (Fire) </option>
+      <option class="bg-blue-300" value="11">Agua (Water) </option>
+      <option class="bg-green-400" value="12">Hierba (Grass) </option>
+    </select>
+  </div>
+</div>
+
+<h1 class="text-center font-bold text-2xl text-yellow-900 mb-4">POKEMONS</h1>
+
+<table class="flex justify-center flex-col items-center">
+  <tr *ngFor="let pokemon of items">
+    <td><a href="{{pokemon.pokemon.url}}" target="_blank" >{{pokemon.pokemon.name}}</a></td>
   </tr>
 </table>
 
