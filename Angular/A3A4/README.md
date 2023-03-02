@@ -78,9 +78,7 @@ Para realizar este apartado de Tarea INTERMEDIA, lo primero que he hecho es busc
 
 
 
-
 ---
-
 
 
 
@@ -109,7 +107,3 @@ En este apartado vamos a ponernos a implementar todos los apartados anteriores, 
                                                                           CASO OK:
                                             Abrimos la página principal y vemos el desplegable con la lista de fuego,
                                             hacemos click en agua o hierba y se muestra el desplegable de esos tipos.
-
-
-
-
